@@ -1,0 +1,16 @@
+﻿@model FurnitureWizardDemo.ViewModel.MainMenuList
+
+@{
+    ViewBag.Title = "MainMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MainMenu</h2>
+
+@foreach (var option in Model.MainMenu)
+{
+    @Html.ActionLink(@option.Option, "SelectMenuOption", new { menuOption = @option.Option})
+    <br />
+}
+
+

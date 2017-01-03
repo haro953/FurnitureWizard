@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FurnitureWizardDemo.Models.Customer>
+@{
+    ViewBag.Title = "ShowAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer List</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBox("SearchString")
+        <input type="submit" value="Filter" />
+    </div>
+}
+<div>
+    @Html.ActionLink("Create New Customer", "Create") |
+    @Html.ActionLink("Main Menu","MainMenuReturn")
+</div>
+
+
+<table class="table">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+    </tr>
+
+
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelCustomer => customer.FirstName, new { @class = "firstname" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelCustomer => customer.LastName)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = customer.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = customer.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = customer.ID })
+            </td>
+        </tr>
+    }
+</table>
