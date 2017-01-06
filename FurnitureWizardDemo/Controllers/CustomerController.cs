@@ -120,6 +120,8 @@ namespace FurnitureWizardDemo.Controllers
 
 
         //make sure to finish implementation
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Customer customer = customerDatabase.Customer.Find(id);

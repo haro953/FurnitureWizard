@@ -13,8 +13,12 @@
     </div>
 }
 <div>
-    @Html.ActionLink("Create New Customer", "Create") |
-    @Html.ActionLink("Main Menu","MainMenuReturn")
+    <div class="menuItem">
+        @Html.ActionLink("Create New Customer", "Create")
+    </div>
+    <div class="menuItem backToMain">
+        @Html.ActionLink("Main Menu", "MainMenuReturn")
+    </div>
 </div>
 
 

@@ -1,0 +1,16 @@
+﻿body {}
+
+.menuItem {
+    width:120px; 
+    height:30px; 
+    background-color:lightgray; 
+    padding-bottom:10px; 
+    text-decoration:none; 
+    text-align:center; 
+    color:black;
+    border-radius:3px;
+    line-height:30px;
+    box-shadow:rgba(0,0,0,0.4) 1px 1px;
+    }
+
+.menuItem a:hover{text-decoration:none;}

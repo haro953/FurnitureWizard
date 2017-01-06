@@ -9,8 +9,11 @@
 
 @foreach (var option in Model.MainMenu)
 {
-    @Html.ActionLink(@option.Option, "SelectMenuOption", new { menuOption = @option.Option})
+    <div class="menuItem">
+        @Html.ActionLink(@option.Option, "SelectMenuOption", new { menuOption = @option.Option })
+    </div>
     <br />
+
 }
 
 
